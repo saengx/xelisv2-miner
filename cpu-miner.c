@@ -648,7 +648,7 @@ static bool get_mininginfo(CURL *curl, struct work *work)
 							strcat(netinfo, ", net ");
 							strcat(netinfo, srate);
 						}
-						applog(LOG_BLUE, "%s block %d, %s",
+						applog(LOG_BLUE, "%s block %d",
 							algo_names[opt_algo], work->height, netinfo);
 					}
 				}
@@ -1049,7 +1049,7 @@ static int share_result(int result, struct work *work, const char *reason)
 
 	switch (opt_algo) {
 	default:
-		applog(LOG_NOTICE, "%s" CL_WHT ": [%lu]:[" CL_RED "%lu" CL_CYN"] %s, %s %sH/s",
+		applog(LOG_NOTICE, "%s" CL_WHT ": [%lu]:\033[0m\033[31m[%lu]\033[0m \033[32m%s\033[0m ⚡⚡\033[36m %s%sH/s\033[0m🚀🚀",
 			flag, accepted_count, rejected_count,
 			suppl, hr, hr_units);
 		break;
