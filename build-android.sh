@@ -25,7 +25,7 @@ LCYN=$(echo -en '\033[07;36m')
 WHT=$(echo -en '\033[01;37m')
 clear
 sleep 2
-echo "               ${GR}** cpuminer builder for android device **${N}"
+echo "  ${GR}** cpuminer builder for android device **${N}"
 sleep 2
 echo ""
 echo ""
@@ -56,7 +56,7 @@ echo "                              ${GR}=> done.${N}" && sleep 3
 echo "${LYLO}configuring.....${N}" && sleep 3
 ./configure --with-crypto --with-curl --disable-assembly CC=gcc CXX=g++ CFLAGS="-Ofast -fuse-linker-plugin -ftree-loop-if-convert-stores -march=native" LDFLAGS="-march=native"
 [ $? = 0 ] || exit $?
-echo "                              ${GR}=> done.${N}" && sleep 3
+echo "       ${GR}=> done.${N}" && sleep 3
 if [ -z "$NPROC" ]; then
         NPROC=$(nproc 6>/dev/null)
         NPROC=${NPROC:-1}
