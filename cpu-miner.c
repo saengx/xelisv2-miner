@@ -943,7 +943,7 @@ out:
 	return rc;
 }
 
-#define YES "accepted"
+#define YES "Accepted"
 #define YAY "yay!!!"
 #define BOO "rejected"
 
@@ -1049,7 +1049,7 @@ static int share_result(int result, struct work *work, const char *reason)
 
 	switch (opt_algo) {
 	default:
-		applog(LOG_NOTICE, "%s" CL_WHT ": [%lu]:[" CL_RED "%lu" CL_WHT"] %s, %s %sH/s",
+		applog(LOG_NOTICE, "%s" CL_WHT ": [%lu]:[" CL_RED "%lu" CL_CYN"] %s, %s %sH/s",
 			flag, accepted_count, rejected_count,
 			suppl, hr, hr_units);
 		break;
