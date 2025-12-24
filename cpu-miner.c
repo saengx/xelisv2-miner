@@ -1049,7 +1049,7 @@ static int share_result(int result, struct work *work, const char *reason)
 
 	switch (opt_algo) {
 	default:
-		applog(LOG_NOTICE, "%s" CL_WHT ": [%lu]:\033[0m\033[31m[%lu]\033[0m \033[32m%s\033[0m ⚡⚡\033[36m %s%sH/s\033[0m🚀🚀",
+		applog(LOG_NOTICE, "%s" CL_WHT ": [%lu]:\033[0m\033[31m[%lu]\033[0m \033[32m%s\033[0m ⚡⚡\033[36m %s%s H/s\033[0m🚀🚀",
 			flag, accepted_count, rejected_count,
 			suppl, hr, hr_units);
 		break;
